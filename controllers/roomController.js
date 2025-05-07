@@ -48,7 +48,7 @@ export const updateRoomService = async (req, res) => {
 
     // ✅ Only update serviceType if it's valid
    
-
+  room.name = userName; // Update name field
     await room.save();
     res.json({ message: `Room ${roomId} updated successfully!`, room });
   } catch (error) {
